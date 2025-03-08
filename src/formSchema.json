@@ -1,0 +1,56 @@
+{
+    "title": "Dynamic Form",
+    "fields": [
+      {
+        "type": "text",
+        "label": "Full Name",
+        "name": "fullName",
+        "required": true,
+        "minLength": 3,
+        "maxLength": 50
+      },
+      {
+        "type": "email",
+        "label": "Email",
+        "name": "email",
+        "required": true,
+        "pattern": "^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$"
+      },
+      {
+        "type": "select",
+        "label": "Gender",
+        "name": "gender",
+        "options": ["Male", "Female", "Other"],
+        "required": true
+      },
+      {
+        "type": "checkbox",
+        "label": "Subscribe to Newsletter",
+        "name": "subscribe",
+        "required": false
+      },
+      {
+        "type": "section",
+        "label": "Education",
+        "name": "education",
+        "fields": [
+          {
+            "type": "text",
+            "label": "School Name",
+            "name": "schoolName",
+            "required": true,
+            "minLength": 3,
+            "maxLength": 100
+          },
+          {
+            "type": "text",
+            "label": "Degree",
+            "name": "degree",
+            "required": true,
+            "minLength": 2,
+            "maxLength": 50
+          }
+        ]
+      }
+    ]
+  }

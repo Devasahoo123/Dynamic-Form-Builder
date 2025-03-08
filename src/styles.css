@@ -1,0 +1,166 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .dynamic-form {
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh; /* Limit form height to 90% of viewport height */
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    overflow-y: auto; /* Add scroll if content overflows */
+  }
+  
+  .dynamic-form:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  .dynamic-form h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  /* Form Field Styles */
+  .form-field {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-field label {
+    display: block;
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .form-field input:focus,
+  .form-field select:focus,
+  .form-field textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+    outline: none;
+  }
+  
+  .form-field input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.5rem;
+  }
+  
+  /* Checkbox Field Styles */
+  .form-field.checkbox-field {
+    display: flex;
+    align-items: center;
+  }
+  
+  .form-field.checkbox-field label {
+    margin-bottom: 0;
+    font-weight: 400;
+  }
+  
+  /* Select Dropdown Styles */
+  .form-field select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23333'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1rem;
+  }
+  
+  /* Section Styles */
+  .form-section {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background-color: #fafafa;
+  }
+  
+  .form-section h2 {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  /* Button Styles */
+  button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+  
+  button:active {
+    transform: translateY(0);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .dynamic-form {
+      padding: 1.5rem;
+      max-height: 85vh; /* Adjust height for smaller screens */
+    }
+  
+    .dynamic-form h1 {
+      font-size: 1.75rem;
+    }
+  
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      padding: 0.5rem;
+    }
+  
+    button {
+      padding: 0.5rem;
+    }
+  }
+  /* Error Message Styles */
+.error-message {
+    display: block;
+    color: #ff4d4f;
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+  }
+  
+  /* Highlight invalid fields */
+  .form-field input:invalid,
+  .form-field select:invalid {
+    border-color: #ff4d4f;
+  }
